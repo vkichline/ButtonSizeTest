@@ -244,9 +244,9 @@ vector<vector<Button*>> create_buttons(int16_t h_pixels, int16_t v_pixels, int16
   uint8_t h_offset  = (SCREEN_WIDTH  - ((h_pixels + spacing) * h_count) + spacing) / 2;
   uint8_t v_offset  = (SCREEN_HEIGHT - ((v_pixels + spacing) * v_count) + spacing) / 2;
 
-  for(uint8_t h = 0; h < h_count; h++) {
+  for(uint8_t v = 0; v < v_count; v++) {
     vector<Button*> row;
-    for(uint8_t v = 0; v < v_count; v++) {
+    for(uint8_t h = 0; h < h_count; h++) {
       Button* button = new Button(h_offset + (h * (h_pixels + spacing)),
                                   SCREEN_TOP + v_offset + (v * (v_pixels + spacing)),
                                   h_pixels, v_pixels, false, "", offColors, onColors, MC_DATUM, 0, 0, 0);
